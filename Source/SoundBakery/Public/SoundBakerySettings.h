@@ -4,15 +4,15 @@
 #include "Engine/DeveloperSettingsBackedByCVars.h"
 #include "SoundBakerySettings.generated.h"
 
-UCLASS(Config=Game, DefaultConfig, Category=Audio)
-class MYGAME_API USoundBakerySettings : public UDeveloperSettingsBackedByCVars
+UCLASS(Config=Engine, DefaultConfig, Category=Audio, meta = (DisplayName = "Sound Bakery", Tooltip = "Sound Bakery settings for integration and runtime"))
+class SOUNDBAKERY_API USoundBakerySettings : public UDeveloperSettingsBackedByCVars
 {
     GENERATED_BODY()
 
 public:
-    UPROPERTY(Config, EditDefaultsOnly, Category = Setup, meta = (RelativeToGameContentDir))
+    UPROPERTY(Config, EditDefaultsOnly, Category = Setup, meta = (RelativeToGameContentDir, Tooltip = "Directory to search for Soundbanks in"))
     FDirectoryPath BankOutputDirectory;
 
-    UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Graphics", meta = (ConsoleVariable = "sbk.DisplayEmitters"))
-    int32 DisplayEmitters;
+    UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Debug", meta = (ConsoleVariable = "sbk.DisplayEmitters", Tooltip = "Whether to debug draw emitters in the world"))
+    uint8 bDisplayEmitters : 1;
 };

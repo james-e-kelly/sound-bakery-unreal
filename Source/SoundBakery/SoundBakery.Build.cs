@@ -26,8 +26,10 @@ public class SoundBakery : ModuleRules
 			new string[]
 			{
 				"Core",
-				"SoundBakeryLibrary",
-				"Projects"
+                "CoreUObject",
+                "SoundBakeryLibrary",
+				"Projects",
+				"DeveloperSettings"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
