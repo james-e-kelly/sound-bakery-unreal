@@ -6,7 +6,7 @@
 #include "Interfaces/IPluginManager.h"
 #include "Misc/Paths.h"
 #include "HAL/PlatformProcess.h"
-#include "SoundBakeryLibrary/sound_bakery/sound_bakery.h"
+#include "sound_bakery/sound_bakery.h"
 
 #define LOCTEXT_NAMESPACE "FSoundBakeryModule"
 
