@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.3.0",
+	"FriendlyName": "SoundBakery",
+	"Description": "Sound Bakery Unreal integration.",
+	"Category": "Audio",
+	"CreatedBy": "James Kelly",
+	"CreatedByURL": "https://jameskelly.audio",
+	"DocsURL": "https://soundbakery.jameskelly.audio",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/james-e-kelly/sound-bakery/issues",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SoundBakery",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
