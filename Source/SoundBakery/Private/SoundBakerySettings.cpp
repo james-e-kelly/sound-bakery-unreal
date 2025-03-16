@@ -9,3 +9,10 @@ namespace SoundBakerySettingsCVars
 		TEXT("Whether to debug draw the active emitters in the world"),
 		ECVF_Cheat);
 }
+
+USoundBakerySettings::USoundBakerySettings()
+	: bDisplayEmitters(false)
+{
+	SoundbankDirectory.Path = TEXT("Soundbanks");
+	ContentDirectory.Path = TEXT("SoundBakery");
+}

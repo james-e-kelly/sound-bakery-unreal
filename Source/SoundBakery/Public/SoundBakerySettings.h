@@ -10,8 +10,13 @@ class SOUNDBAKERY_API USoundBakerySettings : public UDeveloperSettingsBackedByCV
     GENERATED_BODY()
 
 public:
-    UPROPERTY(Config, EditDefaultsOnly, Category = Setup, meta = (RelativeToGameContentDir, Tooltip = "Directory to search for Soundbanks in"))
-    FDirectoryPath BankOutputDirectory;
+    USoundBakerySettings();
+
+    UPROPERTY(Config, EditDefaultsOnly, Category = Setup, meta = (RelativeToGameContentDir, Tooltip = "Directory to search for Soundbanks from the Sound Bakery project"))
+    FDirectoryPath SoundbankDirectory;
+
+    UPROPERTY(Config, EditDefaultsOnly, Category = Setup, meta = (RelativeToGameContentDir, Tooltip = "Directory to add Sound Bakery Unreal assets to. Should not be equal to the SoundbankDirectory"))
+    FDirectoryPath ContentDirectory;
 
     UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Debug", meta = (ConsoleVariable = "sbk.DisplayEmitters", Tooltip = "Whether to debug draw emitters in the world"))
     uint8 bDisplayEmitters : 1;
