@@ -31,4 +31,5 @@ endif()
 
 install(TARGETS sound_chef_shared DESTINATION "${PROJECT_SOURCE_DIR}/Source/ThirdParty/SoundBakeryLibrary/${SBK_UE5_PLATFORM_FOLDER}/$<CONFIG>")
 install(TARGETS sound_bakery_shared DESTINATION "${PROJECT_SOURCE_DIR}/Source/ThirdParty/SoundBakeryLibrary/${SBK_UE5_PLATFORM_FOLDER}/$<CONFIG>")
-install(DIRECTORY ${sound_bakery_SOURCE_DIR}/dist/inc DESTINATION "${PROJECT_SOURCE_DIR}/Source/ThirdParty/SoundBakeryLibrary/Public")
+install(DIRECTORY ${sound_bakery_SOURCE_DIR}/dist/inc/sound_bakery DESTINATION "${PROJECT_SOURCE_DIR}/Source/ThirdParty/SoundBakeryLibrary/Public/SoundBakeryLibrary")
+install(DIRECTORY ${sound_bakery_SOURCE_DIR}/dist/inc/sound_chef DESTINATION "${PROJECT_SOURCE_DIR}/Source/ThirdParty/SoundBakeryLibrary/Public/SoundBakeryLibrary")

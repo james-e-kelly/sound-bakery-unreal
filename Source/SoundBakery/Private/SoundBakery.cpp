@@ -44,6 +44,8 @@ void FSoundBakeryModule::StartupModule()
 	if (SoundBakeryLibraryHandle && SoundChefLibraryHandle)
 	{
 		sb_system_config config = sb_system_config_init_default();
+		sb_system_create();
+		sb_system_init(config);
 	}
 	else
 	{
@@ -53,6 +55,8 @@ void FSoundBakeryModule::StartupModule()
 
 void FSoundBakeryModule::ShutdownModule()
 {
+	sb_system_destroy();
+
 	FPlatformProcess::FreeDllHandle(SoundBakeryLibraryHandle);
 	FPlatformProcess::FreeDllHandle(SoundChefLibraryHandle);
 	SoundBakeryLibraryHandle = nullptr;
