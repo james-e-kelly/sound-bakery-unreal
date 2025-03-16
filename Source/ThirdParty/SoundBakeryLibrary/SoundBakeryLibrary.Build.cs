@@ -9,9 +9,8 @@ public class SoundBakeryLibrary : ModuleRules
 	{
 		Type = ModuleType.External;
 		PublicSystemIncludePaths.Add("$(ModuleDir)/Public");
-		PublicSystemIncludePaths.Add("$(ModuleDir)/Public/SoundBakeryLibrary");
-		PublicSystemIncludePaths.Add("$(ModuleDir)/Public/SoundBakeryLibrary/sound_bakery");
-		PublicSystemIncludePaths.Add("$(ModuleDir)/Public/SoundBakeryLibrary/sound_chef");
+		PublicSystemIncludePaths.Add("$(ModuleDir)/Public/sound_bakery");
+		PublicSystemIncludePaths.Add("$(ModuleDir)/Public/sound_chef");
 
 		string RootFolder = ModuleDirectory;
 		string PlatformFolder = string.Empty;
